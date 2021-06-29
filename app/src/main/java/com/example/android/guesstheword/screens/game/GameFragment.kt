@@ -110,11 +110,11 @@ class GameFragment : Fragment() {
   */
         //Получаем обсервер от нашей вьюмодели, потом вводим переменнную hasFinished т.к. наша eventGameFinishe Boolean
         // И если из вьюМодели наш евент true то мы вызываем функцию ИГРА ЗАКОНЧЕНА
-        viewModel.eventGameFinished.observe(this, Observer { hasFinished ->
+        viewModel.eventGameFinish.observe(this, Observer { hasFinished ->
 
             if (hasFinished) {
                 gameFinished()
-                viewModel.onGameFinishedCompleate()
+                viewModel.onGameFinishComplete()
             }
         })
 
